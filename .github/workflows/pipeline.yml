@@ -98,7 +98,7 @@ jobs:
         uses: rymndhng/release-on-push-action@master
         id: release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         with:
           tag_prefix: ""
           bump_version_scheme: patch
