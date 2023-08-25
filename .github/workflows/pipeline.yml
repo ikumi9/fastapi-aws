@@ -112,7 +112,7 @@ jobs:
         with:
           tag_prefix: ""
           bump_version_scheme: patch
-          release_body: "The official release "
+          release_body: "The official release demo api "
 
       - name: Check Release Output Parameters
         run: |
