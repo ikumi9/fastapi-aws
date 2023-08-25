@@ -1,16 +1,17 @@
 name: Docker Build and Scan
 
 on:
-  push:
-    branches:
-      - master
-      - qa
-      - dev
-  pull_request:
-    branches:
-      - master
-      - qa
-      - dev
+  workflow_dispatch:
+#  push:
+#    branches:
+#      - master
+#      - qa
+#      - dev
+#  pull_request:
+#    branches:
+#      - master
+#      - qa
+#      - dev
 
 jobs:
   dev:
