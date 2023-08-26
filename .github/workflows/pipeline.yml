@@ -111,7 +111,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         with:
           tag_prefix: ""
-          bump_version_scheme: patch
+          bump_version_scheme: major
           release_body: "The official release demo api "
 
       - name: Check Release Output Parameters
@@ -128,7 +128,7 @@ jobs:
           docker build -t $REGISTRY/$REPOSITORY:${{ steps.release.outputs.version }} . -f multi.Dockerfile
           docker push $REGISTRY/$REPOSITORY:${{ steps.release.outputs.version }}  
 
-      - name: Notify finish deploy to Rollbar
+      - name: Notify finish deploy to Rollbarr
         uses: rollbar/github-deploy-action@2.1.1
         id: rollbar_post_deploy
         with:
